@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="section" id="header">
+      <h1>Header 1</h1>
+      <h2>Header 2</h2>
+      <h3>Header 3</h3>
+      <h4>Header 4</h4>
+      <h5>Header 5</h5>
+      <h6>Header 6</h6>
+    </section>
+
+
+
+
+    <section class="section" id="formatting">
+      <p>this is <strong>Strong</strong></p>
+      <p>this is <em>emphasize</em></p>
+      <p>this is <mark> mark <mark></p>
+      <p>this is <sub>Subscript</sub></p>  
+      <p>this is <del>StikeOut</del></p>
+    </section>
+
+
+
+
+    <section class="section" id="qoutations">
+      <p><q>This is Qoute</q></p>
+      <blockquote>
+        This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote.This is blockquote
+      </blockquote>
+      <bdo dir="rtl">This is a bdo</bdo>
+      <p>thisisa <abbr title="World Health Oraganization">WHO</abbr></p>
+    </section>
+
+
+
+
+    <section class="section" id="comment">
+        <!-- <p>this is a comment </p> -->
+      </section>
+
+
+
+
+    <section class="section" id="link">
+        <a href="https://www.google.com">google</a><br><!--a ต้อง brต่อท้ายไม่งั้นบรรทัดติด-->
+        <a href="https://www.google.com" target="_blank">Google</a> <!--เด้งไปหหน้าใหม่เอง-->
+        <a href="https://www.google.com"><p>this is a google </p></a><!--ถ้าครอบ p ไม่ต้องbr เพราะเว้นเอง-->
+        
+    </section>  
+    
+
+
+
+    <section class="section" id="media">
+      <img src="image/test1.png" alt="รูปผมเอง" height="400"><!--height ปรับความสูงของรูป width ปรับความกว้างของรูป โดยถ้าใส่ค่าเดียวอีกค่าจะ default-->
+      <video src=""></video> <!-- ใส่ ไฟล์.mp4ได้เลย และสามรถใส่ Autoplay ได้-->
+      <audio src=""></audio> <!-- ใส่ ไฟล์.mp3ได้เลย และสามรถใส่ Autoplay ได้-->
+    </section>
+
+
+
+
+    <section class="section" id="table">
+      <table>
+        <caption> Auu table </caption>
+        <tr>
+          <th colspan="2" rowspan="2">title</th> <!--ตัวจะหนาเองถ้าเป็น th-->
+          <th>Date</th>
+        </tr>
+        <tr>
+          <td>Auu</td>
+          <td>13/07/2023</td>
+        </tr>
+      </table>
+    </section>
+
+
+
+
+    <section class="section" id="list">
+      <ol>
+        <li>Aueiei1</li>
+        <li>Aueiei12</li>
+        <li>Aueiei13</li>
+      </ol>
+      <ol type="I">
+          <li>Aueiei1</li>
+          <li>Aueiei12</li>
+          <li>Aueiei13</li>
+        </ol>
+        <ol type="A">
+            <li>Aueiei1</li>
+            <li>Aueiei12</li>
+            <li>Aueiei13</li>
+          </ol>
+       <ul>
+          <li>Aueiei1</li>
+          <li>Aueiei12</li>
+          <li>Aueiei13</li>
+       </ul>   
+       <ul style="list-style-type:square;">
+          <li>Aueiei1</li>
+          <li>Aueiei12</li>
+          <li>Aueiei13</li>
+       </ul>   
+       <dl>
+          <dt>A</dt>
+          <dd>My name is A</dd>
+       </dl>   
+    </section>
+
+
+
+
+    <section class="section" id="Iframe">
+        <iframe  src="https://www.youtube.com/embed/w8LAygZXw8k"></iframe> <!-- copy embedมาได้เลย ถ้ารกก็ลบที่ไม่จำเป็นออก-->
+    </section>
+
+
+
+
+    <section class="section" id="script"> <!--alert จะเด้งเลยเมื่อรั-->
+      <script>
+        //alert("this is a script") 
+        </script>
+    </section>
+
+
+
+
+    <section class="section" id="code" >
+      <pre>
+        <code>
+          function test(a,b){
+            return a+b
+          }
+        </code>
+      </pre>
+      <p> <var>x</var> = 1+2 </p> <!-- ใส่ var ทำให้ x เป็นเหมือนตัวแปร-->
+    </section>
+
+
+
+
+    <section class="section" id="form">
+      <form action="">
+        Text:<input type="text"><br>
+        Text2:<input type="text2" readonly value="ReadMe"><br>
+        Number:<input type="number"><br>
+        Password:<input type="password"><br>
+        Submit:<input type="submit"><br>
+        Textarea: <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        sect: <select name="" id="">
+          <option value="A">A</option>
+          <option value="B" selected>B</option>
+          <option value="C">C</option>
+        </select><br>
+        Blue:<input type="radio" value="Blue">
+        Red:<input type="radio" value="Red">
+        Green:<input type="radio" value="Green">
+        Black:<input type="checkbox" value="Black"> <br>
+        Disable:<input type="text" disabled ><br>
+        button:<button onsubmit="" type="submit">clickme</button>
+      </form>
+    </section>
+  </body>
+</html>
+
+
+
+
+

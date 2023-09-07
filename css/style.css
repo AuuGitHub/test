@@ -1,0 +1,242 @@
+h1 {
+  color: red;
+}
+.width200 {
+  width: 200px;
+  height: 200px;
+}
+.background-color {
+  background-color: #df3434;
+}
+.background-image {
+  background-image: url("/image/test1.png");
+  background-position: center; /*ทำให้อยู่ตรงกลาง(เอาตรงกลางรูปมาโชว์)*/
+  background-size: contain; /*ทำให้เอามาครบรูปเพราะรูปอาจใหญ่เกิน width กับ height ที่ตั้งไว้ แต่ทำให้เกิดภาพซ้อนได้*/
+  background-repeat: no-repeat; /*ลบภาพซ้อน*/
+}
+.border {
+  border: 35px dashed rebeccapurple;
+  /* border: ขนาด ลักษณะ(style เช่น dashed dotted solid) สี */
+  border-bottom: 5px solid blue;
+  /* มีแบบเฉพาะด้านคือ top bottom right left*/
+  border-radius: 30% 50%;
+  /* เอาไว้ใส่รัศมีเพื่อทำเป็นทรงโค้ง*/
+}
+.margin {
+  margin: 50px 100px 30px 100px;
+  /* margin: บน ขวา ล่าง ซ้าย เป็นการใส่ช่องว่างในแต่ละทิศ(เพิ่มขอบ)*/
+  background-color: yellowgreen;
+  /*margin-top: 200px; สามารถดำหนดเฉพาะด้านได้เหมือนborderโดยใช้ top bottom right left*/
+}
+.padding {
+  padding: 10px 10px 20px 30px;
+  /* padding: บน ขวา ล่าง ซ้าย เป็นการเพิ่มช่องว่างในแต่ละทิศ(เติมข้างในซึ่งดันไซต์ของ widthด้วย*/
+  background-color: yellowgreen;
+  /*เหมือน marginเลยด้านวิธีใช้ และการใส่่ค่าเดียวแทน4ค่าจะทำให้กำหนดทุกด้านเท่ากันกับค่านั้น*/
+}
+.width-height {
+  width: 300px;
+  height: 400px;
+  background-color: violet;
+  /* หน่วยจะมีหลายอย่าง เช่น px pt(ต่างกันที่เม็ดpxที่จอแต่ละคนซึ่งทำให้เท่ากัน) % โดยheightใช้ตรงๆไม่ได้ แต่สามารถใช้ vw ได้ และก้หน่วยทั่วไปเช่น cm*/
+  max-width: 200px;
+  max-height: 200px;
+  /*ทั้ง2เอาไว้กำหนดmax ทำให้สิ่งที่เกินัน้นไม่แสดงผล*/
+}
+/*ทด เรียงจากนอกมาในของelement margin->border->padding->content(width height) */
+.mixed {
+  width: 200px;
+  height: 200px;
+  padding: 30px;
+  margin: 50px;
+  border: 10px solid blue;
+}
+.outline {
+  outline: 15px solid green;
+  /* outline: ขนาด ลักษณะ(style เช่น dashed dotted solid) สี */
+  /*เหมือนborderแต่ไม่ดันตัวอื่นซึ่งทำให้ทับกับตัวอื่น*/
+}
+.text {
+  margin: 100px;
+}
+.text p {
+  text-align: center;
+  /* text-align: justify; ยืด */
+}
+.text .left {
+  text-align: left;
+  text-decoration: underline;
+  text-decoration: line-through;
+  text-decoration-color: red;
+  text-decoration-thickness: 1px;
+}
+.text .right {
+  text-align: right;
+  text-decoration: overline;
+  /* text-transform: lowercase; ตัวเล็กหมด*/
+  /* text-transform: uppercase; ตัวใหญ่หมด*/
+  text-transform: capitalize; /* เรื่มด้วยตัวใหญ่*/
+}
+.text .indent {
+  text-indent: 50px; /* ย่อหน้า */
+  letter-spacing: 5px; /*ใส่- ให้มันติดกันขึ้นได้*/
+  font-size: 30px;
+  line-height: 1.8; /*ระยะห่างบรรทัด อิงตามขนาด font ใส่เป็นเท่าหรือpxได้ */
+  word-spacing: 20px; /* ช่องว่าระหว่างคำโดยต้องเว้นspaceไว้ตอนเขียนมันจะปรับช่องว่างให้ตามขนาดที่กำหนด*/
+  text-shadow: 5px 5px 10px blue;
+  /* text-shadow: ออกขวา ออกล่าง การกระจาย สี; */
+}
+.font {
+  margin: 100px;
+  font-size: 20px;
+}
+.font p:first-child {
+  /* สำหรับตัวแรกใช้ first-child ถ้าไม่มีกำกับเป็นแค่ p เฉยๆคือใช้ทั้งหมด*/
+  font-family: arial;
+}
+html {
+  font-size: 15px;
+}
+.font p:nth-child(3) {
+  /* สำหรับตัวต่อๆไปใช้ nth-child โดยเริ่มจาก2เพราะ1คือ first*/
+  font-family: arial;
+  font-weight: bold;
+  /* font-weight: ความหนาที่ต้องการสามารถใช้ตัวเลขก้ได้ เช่น bold = 700 medium = 500  เป็นต้น; */
+  font-size: 30px;
+  /*สามารถใช้หน่วยได้มากมายแต่ถ้าใช้ remจะrefจากhtmlที่เรากำหนดfont-size ไว้ที่ 15px*
+  และ emจะเทียบจาก .fontที่เรากำหนด font-size= 20px*/
+  font-style: inherit;
+}
+.link a:link {
+  color: blue;
+}
+.link a:visited {
+  color: #df3434;
+}
+.link a:active {
+  color: green;
+}
+.link a:hover {
+  color: orangered;
+  background-color: peru;
+}
+.list ul {
+  list-style-type: disc;
+  /* list-style-type: circle;
+  list-style-type: square; */
+  background: teal;
+}
+.list ul li {
+  list-style-position: outside;
+  background-color: rebeccapurple;
+  color: white;
+  margin: 5px;
+  margin-left: 15px;
+}
+.display p:first-child {
+  display: none; /*ซ่อน **pกับ : ต้องติดกันนะ*/
+}
+.display p:nth-child(2) {
+  display: block; /*ปกติ*/
+}
+.display p:nth-child(3) {
+  display: inline; /*ทำให้บรรทัดเดียวกัน*/
+}
+.display p:nth-child(4) {
+  display: inline; /*ทำให้บรรทัดเดียวกัน*/
+}
+.display p:nth-child(5) {
+  display: inline-block; /*ทำให้บรรทัดเดียวกัน*/
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.flex .flex-item {
+  flex: 1;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  background-color: pink;
+}
+.flex .flex-item:first-child {
+  flex: 2;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  background-color: pink;
+}
+
+.position {
+  position: relative;
+  height: 1000px;
+}
+.position div:first-child {
+  position: static;
+}
+
+.position div:nth-child(2) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* กำหนดได้4ทิศเลย */
+}
+.position div:nth-child(3) {
+  position: relative;
+  top: 100px;
+  left: 100px;
+  /* ต่างกับstaticแค่ตัว relative จะขยับได้แต่คงค่าไว้ */
+}
+.position div:nth-child(4) {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+  /* จะค้างอยู่ที่เดิมของหน้าจอเสมอ ใส่ได้ 4 ทิศเหมือนเดิม*/
+}
+.position div:nth-child(5) {
+  position: sticky;
+  top: 10px;
+  left: 0px;
+  /* จะค้างอยู่ที่เดิมด้านบนถ้าลากข้ามมันลงมาแล้ว*/
+}
+
+.overflow {
+  overflow: auto; /* (auto scroll hidden) */
+  height: 300px;
+  /* overflow-x: hidden; */
+  overflow-y: hidden;
+}
+.overflow .box {
+  height: 1000px;
+  width: 150%;
+  background-color: royalblue;
+}
+.overflow .box {
+  height: 1000px;
+  background-color: royalblue;
+}
+
+.float {
+}
+
+.float .left {
+  float: left;
+  background-color: saddlebrown;
+  width: 100px;
+  height: 100px;
+}
+.float .right {
+  float: right;
+  background-color: salmon;
+  width: 100px;
+  height: 100px;
+}
+.float .normal {
+  background-color: darkcyan;
+  width: 100px;
+  height: 100px;
+}

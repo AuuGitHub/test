@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      /* คอมเม้น โดย ctrl+/ */
+      h1 {
+        color: violet; /* ทำเป็นลำดับ3 แต่สามารถทำเป็นอันดับแรกได้โดบเติม !important ตามหลัง */
+      }
+      .important {
+        color: teal !important; /* เป็นการเลือกเฉพาะเจาะจงไปที่class */
+      }
+      #Head {
+        color: aqua !important; /* เป็นการเลือกเฉพาะเจาะจงไปที่id โดยต้องมี!important ไม่งั้นถ้ามีลำดับ2 จะต้องทำลำดับ2ก่อน */
+      }
+
+      .first h1 {
+        color: black !important; /* เป็นการเลือกเฉพาะเจาะจงไปที่classและ h1 */
+      }
+      .first > h1 {
+        color: aquamarine; /* เป็นการเลือกเฉพาะเจาะจงไปที่classและ h1 แบบนี้ดีกว่าแต่ถ้ามี 2 แบบให้เลือกใช้จาก !important */
+      }
+      .RGB h1 {
+        color: rgb(123, 123, 123);
+      }
+      .hex h1 {
+        color: #d45f9d;
+      }
+      .RGBA h1 {
+        color: rgba(123, 123, 123, 0.5); /* ตัวสุดท้ายปรับความเข้ม*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css</h1>
+    <!-- สำคัญต่ำสุดคือการ importจาก href -->
+    <h1 style="color: wheat;">css</h1>
+    <!-- ทำก่อนทั้งหมดยกเว้น !important (ลำดับ2) -->
+    <h1 class="important">css</h1>
+    <h1 id="Head">css</h1>
+
+    <div class="first">
+      <h1>css</h1>
+    </div>
+
+    <div class="RGB">
+      <h1>css</h1>
+    </div>
+
+    <div class="hex">
+      <h1>css</h1>
+    </div>
+
+    <div class="RGBA">
+      <h1>css</h1>
+    </div>
+
+    <!-- <div></div>  เป็นแท็กที่ใช้ได้ทั่วไปเพราะไม่มี default-->
+    <div class="background-color background-image width200"></div>
+    <!-- width200 คือที่สร้างไว้ เพราะจะใช้ซ้ำ โดยclass สามารถใช้หลายๆอันได้แบบด้านบน -->
+    <div class="background-image width200"></div>
+    <div class="border width200"></div>
+    <div class="margin width200"></div>
+    <div class="padding width200">
+      text text text text texttext texttexttexttextte
+    </div>
+    <div class="width-height"></div>
+    <div class="mixed"></div>
+    <div class="outline width200"></div>
+    <div class="text">
+      <p>trxtjfklsad;fjl;</p>
+      <p class="left">trxtjfklsad;fjl;</p>
+      <p class="right">trxtjfklsad;fjl;</p>
+      <p class="indent">
+        trxtjfkls;l;fjl;fjl;fjl;fjl;fjl;fjl;fjl;l;fjl
+        ;fjl;fjl;fjl;fjl;fjl;fjl;l;fjl;fjl; dasd
+      </p>
+    </div>
+    <div class="font">
+      <p>This is a Pem</p>
+      <p>This is a Pem</p>
+      <p>This is a Pem</p>
+      <p>This is a Pem</p>
+      <p>This is a Pem</p>
+      <p>This is a Pem</p>
+    </div>
+
+    <div class="icon">
+      <i class="fa fa-dragon"></i>
+      <i class="fa fa-scroll"></i>
+      <i class="fa fa-solid fa-house"></i>
+    </div>
+
+    <div class="link">
+      <a href="css.html">test1</a>
+      <a href="/a">test2</a>
+      <a href="/b">test3</a>
+      <a href="/ss">test4</a>
+    </div>
+
+    <div class="list">
+      <ul>
+        <li>This is NepList</li>
+        <li>This is NepList</li>
+        <li>This is NepList</li>
+        <li>This is NepList</li>
+        <li>This is NepList</li>
+        <li>This is NepList</li>
+      </ul>
+    </div>
+
+    <div class="display">
+      <p>This is klfds 1</p>
+      <p>This is klfds 2</p>
+      <p>This is klfds 3</p>
+      <p>This is klfds 4</p>
+      <p>This is klfds 5</p>
+      <p>
+        <div>saaaassss 1</div>
+        <div>saaaassss 2</div>
+      </p>
+    </div>
+
+    <div class="flex">
+      <div class="flex-item">A</div>
+      <div class="flex-item">A</div>
+      <div class="flex-item">a</div>
+      <div class="flex-item">a</div>
+    </div>
+
+    <div class="position">
+      <div>a</div>
+      <div>b</div>
+      <div>c</div>
+      <div>d</div>
+      <div>e</div>
+    </div>
+    
+    <div class="overflow">
+      <div class="box"></div>
+    </div>
+
+    <div class="float">
+      <div class="normal"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+  </body>
+</html>
+
